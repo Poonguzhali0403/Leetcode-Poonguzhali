@@ -1,0 +1,20 @@
+// Last updated: 8/11/2026, 2:17:51 PM
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int i = s.length() - 1;
+        int length = 0;
+
+        // Skip trailing spaces
+        while (i >= 0 && s.charAt(i) == ' ') {
+            i--;
+        }
+
+        // Count characters of the last word
+        while (i >= 0 && s.charAt(i) != ' ') {
+            length++;
+            i--;
+        }
+
+        return length;
+    }
+}
